@@ -1,16 +1,17 @@
 let button = document.querySelector("button");
 let display = document.querySelector("span");
+let input = document.querySelector("input")
 
 button.addEventListener("click", nextNum);
 
-let array = [22, 3, 5, 17, 30, 66];
 let i = 0;
 
 function nextNum() {
+    let array = input.value.split(",").map(Number);
     if (i < array.length) {
         display.textContent = array[i];
         i++;
     } 
 }
 
-nextNum();
+
